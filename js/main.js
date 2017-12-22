@@ -21,9 +21,11 @@ for(var i = 0; i < pacientes.length; i++){
 
     if(tdPeso.textContent <= 0 || tdPeso.textContent >= 200){
         tdImc.textContent = 'Peso incorreto!';
+        paciente.classList.add('paciente-invalido');
     }
     if(tdAltura.textContent <= 1.00 || tdAltura.textContent >= 2.00){
         tdImc.textContent = 'Altura incorreta!';
+        paciente.classList.add('paciente-invalido');
     }
 
 }

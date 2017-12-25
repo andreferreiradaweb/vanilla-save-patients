@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <input class="frase"><button class="botao">Adicionar tarefa</button> <br>
+    <ul class="lista">
+        <li>Ir ao médico</li>
+        <li>Trocar a senha do Wifi</li>
+        <li>Estudar Javascript</li>
+    </ul>
+    <script>
+        var inputFrase = document.querySelector('.frase');
+        var botao = document.querySelector('.botao');
+        var lista = document.querySelector('.lista');
+
+        function botaoHandler(event) {
+            event.preventDefault();
+            var copia = inputFrase.value;
+            var newLi = document.createElement('li');
+            newLi.textContent = copia;
+            lista.appendChild(newLi);
+            inputFrase.value = '';
+            console.log('The new task has been created!');
+
+        }
+
+        botao.addEventListener('click', botaoHandler);
+     </script>
+
+</body>
+</html>

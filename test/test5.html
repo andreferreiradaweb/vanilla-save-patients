@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>adding a class with js</title>
+	<style>
+		.estilo1{
+			color: red;
+			background-color: black;
+		}
+
+		.estilo2{
+			color: white;
+			background-color: black;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="myList">Este é um título...</h1>
+	<ul>
+		<li class="taskOne">Task one</li>
+		<li>Task two</li>
+		<li>Task three</li>
+	</ul>
+
+	<script>
+		var lista = document.querySelector('.taskOne');
+		lista.classList.add('estilo2');
+
+		document.getElementById('myList').classList.add('estilo1');
+	</script>
+
+</body>
+</html>
